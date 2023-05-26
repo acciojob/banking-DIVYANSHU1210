@@ -54,26 +54,26 @@ public class CurrentAccount extends BankAccount{
             if(maxfreq>(n+1)/2) throw new Exception("Valid License can not be generated");
         }
 
-        char [] nl = new char[n];
-        int ele = n;
-        int i = 0;
-        while(ele > 0){
-            while(freq[maxd]>0){
-                nl[i] = (char) maxd;
-                ele--;
-                freq[maxd]--;
-                i = (i + 2);
-            }
-            for(int t=0; t<128; t++) {
-                while (freq[t] > 0) {
-                    nl[i] = (char) t;
-                    ele--;
-                    freq[t]--;
-                    i = (i + 2)%n;
-                }
-            }
-        }
-        tradeLicenseId = nl.toString();
+//        char [] nl = new char[n];
+//        int ele = n;
+//        int i = 0;
+//        while(ele > 0){
+//            while(freq[maxd]>0){
+//                nl[i] = (char) maxd;
+//                ele--;
+//                freq[maxd]--;
+//                i = (i + 2);
+//            }
+//            for(int t=0; t<128; t++) {
+//                while (freq[t] > 0) {
+//                    nl[i] = (char) t;
+//                    ele--;
+//                    freq[t]--;
+//                    i = (i + 2)%n;
+//                }
+//            }
+//        }
+//        tradeLicenseId = nl.toString();
     }
 
 }
